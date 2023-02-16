@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class AppIcon extends StatelessWidget {
@@ -8,15 +10,23 @@ class AppIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          "assets/icons/$image",
-          height: 75,
-        ),
-        const SizedBox(height: 5),
-        Text(name),
-      ],
+    return InkWell(
+      onTap: () {
+        log("$name Started!");
+      },
+      child: Column(
+        children: [
+          Image.asset(
+            "assets/icons/$image",
+            height: 75,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            name,
+            style: const TextStyle(color: Colors.white),
+          ),
+        ],
+      ),
     );
   }
 }

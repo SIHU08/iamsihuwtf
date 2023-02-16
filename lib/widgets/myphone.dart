@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:iamsihuwtf/widgets/infobar.dart';
 
+import 'appgrid.dart';
 import 'bottomapps.dart';
 
 class MyPhone extends StatefulWidget {
@@ -17,12 +17,11 @@ class _MyPhoneState extends State<MyPhone> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: const BoxDecoration(
-            color: Colors.white,
-          ),
+          color: Colors.black,
           child: Column(
             children: const [
-              Spacer(),
+              InfoBar(),
+              Expanded(child: AppGrid()),
               BottomApps(),
             ],
           ),

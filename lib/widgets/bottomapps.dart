@@ -7,14 +7,15 @@ class BottomApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 30, right: 30, top: 5, bottom: 10),
+      padding: const EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 5),
+      color: Colors.grey,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const AppIcon("Phone.png", "Phone"),
-          const AppIcon("Mail.png", "Mail"),
-          const AppIcon("Safari.png", "Safari"),
-          const AppIcon("Apple-Music.png", "Music"),
+        children: const [
+          AppIcon("Phone.png", "Phone"),
+          AppIcon("Mail.png", "Mail"),
+          AppIcon("Safari.png", "Safari"),
+          AppIcon("Apple-Music.png", "Music"),
         ],
       ),
     );
