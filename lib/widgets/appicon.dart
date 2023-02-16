@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class AppIcon extends StatelessWidget {
-  const AppIcon({super.key});
+  final String image;
+  final String name;
+
+  const AppIcon(this.image, this.name, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Column(
+      children: [
+        Image.asset(
+          "assets/icons/$image",
+          height: 75,
+        ),
+        const SizedBox(height: 5),
+        Text(name),
+      ],
+    );
   }
 }

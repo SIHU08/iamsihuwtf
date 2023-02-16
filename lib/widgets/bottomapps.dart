@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:iamsihuwtf/widgets/appicon.dart';
 
 class BottomApps extends StatelessWidget {
   const BottomApps({super.key});
@@ -8,10 +7,14 @@ class BottomApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 5),
+      padding: const EdgeInsets.only(left: 30, right: 30, top: 5, bottom: 10),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text("Hi"),
+          const AppIcon("Phone.png", "Phone"),
+          const AppIcon("Mail.png", "Mail"),
+          const AppIcon("Safari.png", "Safari"),
+          const AppIcon("Apple-Music.png", "Music"),
         ],
       ),
     );

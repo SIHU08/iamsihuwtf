@@ -21,8 +21,8 @@ class _MyPhoneState extends State<MyPhone> {
             color: Colors.white,
           ),
           child: Column(
-            children: [
-              const Spacer(),
+            children: const [
+              Spacer(),
               BottomApps(),
             ],
           ),
